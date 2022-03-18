@@ -22,12 +22,12 @@ function App() {
           </li>
           <li className="nav-item- m-1">
             <NavLink className="btn btn-light btn-outline-primary" to="/department">
-              Department
+              Departmentos
             </NavLink>
           </li>
           <li className="nav-item- m-1">
             <NavLink className="btn btn-light btn-outline-primary" to="/employee">
-              Employee
+              Funcionários
             </NavLink>
           </li>
         </ul>
