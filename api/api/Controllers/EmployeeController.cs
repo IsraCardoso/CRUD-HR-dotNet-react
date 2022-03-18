@@ -40,7 +40,7 @@ namespace api.Controllers
         {
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("EmployeeAppCon"));
 
-            int LastEmployeeId = dbClient.GetDatabase("testdb").GetCollection<Department>("Employee").AsQueryable().Count();
+            int LastEmployeeId = dbClient.GetDatabase("testdb").GetCollection<Employee>("Employee").AsQueryable().Count();
             emp.EmployeeId = LastEmployeeId + 1;
 
             dbClient.GetDatabase("testdb").GetCollection<Employee>("Employee").InsertOne(emp);
@@ -79,7 +79,6 @@ namespace api.Controllers
             return new JsonResult("Deleted Successfully");
         }
 
-
         [Route("SaveFile")]
         [HttpPost]
         public JsonResult SaveFile()
@@ -101,11 +100,8 @@ namespace api.Controllers
             catch (Exception)
             {
 
-                return new JsonResult("anonymous.png");
+                return new JsonResult("usuario-anonimo.png");
             }
         }
-
-
-
     }
 }
