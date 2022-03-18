@@ -48,7 +48,7 @@ export class Employee extends Component {
 
   addClick() {
     this.setState({
-      modalTitle: "Add Employee",
+      modalTitle: "Adicionar Funcionário",
       EmployeeId: 0,
       EmployeeName: "",
       Department: "",
@@ -58,7 +58,7 @@ export class Employee extends Component {
   }
   editClick(emp) {
     this.setState({
-      modalTitle: "Edit Employee",
+      modalTitle: "Atualizar Funcionário",
       EmployeeId: emp.EmployeeId,
       EmployeeName: emp.EmployeeName,
       Department: emp.Department,
@@ -121,7 +121,7 @@ export class Employee extends Component {
   }
 
   deleteClick(id) {
-    if (window.confirm("Are you sure?")) {
+    if (window.confirm("Confirmar exclusão de Funcionário?")) {
       fetch(variables.API_URL + "employee/" + id, {
         method: "DELETE",
         headers: {

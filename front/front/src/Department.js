@@ -76,14 +76,14 @@ export class Department extends Component {
 
   addClick() {
     this.setState({
-      modalTitle: "Add Department",
+      modalTitle: "Adicionar Departamento",
       DepartmentId: 0,
       DepartmentName: "",
     });
   }
   editClick(dep) {
     this.setState({
-      modalTitle: "Edit Department",
+      modalTitle: "Editar Departamento",
       DepartmentId: dep.DepartmentId,
       DepartmentName: dep.DepartmentName,
     });
@@ -231,7 +231,7 @@ export class Department extends Component {
                   <button
                     type="button"
                     className="btn btn-light"
-                    onClick={() => this.sortResult("DepartmentName", true)}
+                    onClick={() => this.sortResult("Nome do Departamento:", true)}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -338,7 +338,7 @@ export class Department extends Component {
 
               <div className="modal-body">
                 <div className="input-group mb-3">
-                  <span className="input-group-text">DepartmentName</span>
+                  <span className="input-group-text">Nome do Departamento:</span>
                   <input
                     type="text"
                     className="form-control"
